@@ -17,7 +17,9 @@ public class ConsumerBasicExample {
         Consumer<String> printName = name -> System.out.println("Name: " + name);
 
         // Apply the Consumer to each name in the list
-        processNames(names, printName);
+       // processNames(names, printName);
+
+        names.forEach(printName);
     }
 
     // Method to process a list of names using a Consumer
