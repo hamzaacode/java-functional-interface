@@ -6,10 +6,12 @@ import java.util.function.Supplier;
 public class SupplierExample {
     public static void main(String[] args) {
         // Define a Supplier to generate a random number
-        Supplier<Integer> randomSupplier = () -> new Random().nextInt(100);
+       // Supplier<Integer> randomSupplier = () -> new Random().nextInt(100);
+
+        Supplier<Double> randomSupplier=()-> (Double) Math.random();
 
         // Get a random number using the Supplier
-        int randomNumber = randomSupplier.get();
+        Double randomNumber = randomSupplier.get();
 
         System.out.println("Random Number: " + randomNumber);
     }
