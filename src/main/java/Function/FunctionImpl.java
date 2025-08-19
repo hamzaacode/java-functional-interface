@@ -23,4 +23,19 @@ public class FunctionImpl {
         Function<String, String> function = s -> s.toUpperCase();
         return function;
     }
+
+    public Function<String, Long> getVowelsCount(){
+        Function<String,Long> vowelsCount=word-> {
+          char[] chArray=  word.toLowerCase().toCharArray();
+          long count=0;
+          String vowels="aeiou";
+          for(Character c:chArray){
+              if(vowels.contains(String.valueOf(c))){
+                  count++;
+              }
+          }
+            return count;
+        };
+        return vowelsCount;
+    }
 }

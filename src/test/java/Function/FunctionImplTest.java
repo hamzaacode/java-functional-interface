@@ -36,4 +36,14 @@ class FunctionImplTest {
         Assertions.assertNotNull(converter);
         Assertions.assertEquals(converter.apply("apple"),"APPLE");
     }
+
+    @Test
+    void sholdGetVowelCountOfWords(){
+        Function<String,Long> countF=function.getVowelsCount();
+        Assertions.assertNotNull(countF);
+        Assertions.assertEquals(2,countF.apply("apple"));
+        Assertions.assertEquals(2,countF.apply("Mango"));
+        Assertions.assertEquals(2,countF.apply("Fruits"));
+        Assertions.assertEquals(3L, countF.apply("banana"));
+    }
 }

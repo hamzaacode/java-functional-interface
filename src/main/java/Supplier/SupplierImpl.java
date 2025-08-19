@@ -19,6 +19,12 @@ public class SupplierImpl {
         return stringSupplier;
     }
 
+    public Supplier<String> getStringSupplier(){
+        String str="hello,world";
+        Supplier<String> stringSupplier = () -> "hello world";
+        return stringSupplier;
+    }
+
     public Supplier<Number> getNumberFromSupplier() {
         return () -> (Number) 8787;
     }
